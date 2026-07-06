@@ -1,0 +1,244 @@
+/* ==========================================================================
+   MODERN OVERRIDES
+   Premium typography, cards, animations for the custom theme
+   ========================================================================== */
+
+/* --- TYPOGRAPHY POLISH --- */
+body {
+  font-weight: 400;
+  font-size: #{$doc-font-size}px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 1.5em 0 0.5em;
+  color: var(--global-text-color);
+}
+
+h1 { font-size: $type-size-1; font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: $type-size-2; font-weight: 700; }
+h3 { font-size: $type-size-3; font-weight: 600; }
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+  color: var(--global-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--global-link-color);
+  transition: var(--transition);
+  &:hover { color: var(--global-link-color-hover); }
+}
+
+/* --- SIDEBAR MODERN STYLING --- */
+.sidebar {
+  opacity: 1;
+  @include breakpoint($sidebar-screen-min-width) {
+    padding-top: 2em;
+  }
+
+  .author__avatar img {
+    border-radius: 50%;
+    max-width: 150px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+  }
+
+  .author__name {
+    font-weight: 700;
+    font-size: 1.35em;
+    letter-spacing: -0.01em;
+    margin: 0.5em 0 0;
+  }
+
+  .author__bio {
+    font-size: 0.9em;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+  }
+
+  .author__urls-wrapper {
+    .btn--inverse {
+      display: none; /* hide the "Follow" button, it's ugly */
+    }
+    .social-icons {
+      border: none;
+      padding: 0;
+    }
+    .author__urls {
+      padding-left: 0;
+      li {
+        margin-bottom: 0.35em;
+        a, span {
+          font-size: 0.875em;
+          color: var(--global-text-color-light);
+          transition: var(--transition);
+          &:hover { color: var(--global-link-color); }
+        }
+        i, .ai {
+          color: var(--global-base-color);
+          opacity: 0.7;
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+/* --- PAGE CONTENT CARDS --- */
+.page__content {
+  @include breakpoint($sidebar-screen-min-width) {
+    padding-top: 1em;
+  }
+
+  /* Make archive items look like cards */
+  .archive__item {
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: 1.5em 1.75em;
+    margin-bottom: 1.25em;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--global-border-color);
+    transition: var(--transition);
+
+    &:hover {
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-2px);
+      border-color: transparent;
+    }
+  }
+
+  .archive__item-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.25em;
+    a { color: var(--global-text-color); }
+  }
+
+  .archive__item-excerpt {
+    color: var(--global-text-color-light);
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: 0.5em;
+  }
+
+  /* Publication venue / meta */
+  .archive__item-date,
+  .page__meta {
+    font-size: 0.8em;
+    color: var(--global-base-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* --- MASTHEAD (TOP NAV) --- */
+.masthead {
+  border-bottom: 1px solid var(--global-border-color);
+  background: var(--card-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  backdrop-filter: blur(10px);
+
+  .masthead__menu-item a {
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* --- FOOTER --- */
+.page__footer {
+  border-top: 1px solid var(--global-border-color);
+  background: var(--card-bg);
+  footer {
+    color: var(--global-text-color-light);
+    font-size: 0.8em;
+    padding: 1.5em 0;
+  }
+}
+
+/* --- BUTTONS --- */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: $global-font-family;
+  letter-spacing: 0.01em;
+  padding: 0.5em 1.2em;
+  transition: var(--transition);
+}
+
+/* --- SCROLL-REVEAL ANIMATION --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger for lists */
+.archive__item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- CODE SNIPPETS --- */
+div.highlighter-rouge, figure.highlight {
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  margin: 1.5em 0;
+}
+
+/* --- RESPONSIVE POLISH --- */
+@include breakpoint(max-width $sidebar-screen-min-width) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.6em; }
+  .archive__item {
+    padding: 1.25em 1.25em;
+  }
+}
+
+/* --- DARK MODE EXTRA POLISH --- */
+html[data-theme="dark"] {
+  .masthead {
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(12px);
+  }
+  .archive__item:hover {
+    background: var(--background-lighter);
+  }
+  img {
+    opacity: 0.9;
+    &:hover { opacity: 1; }
+  }
+}
+
+/* --- PUBLICATION LINKS BUTTONS --- */
+.archive__item .btn {
+  font-size: 0.75em;
+  padding: 0.35em 0.8em;
+  margin-right: 0.35em;
+  margin-bottom: 0.35em;
+}

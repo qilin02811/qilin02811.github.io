@@ -1,0 +1,59 @@
+/* ==========================================================================
+    CUSTOM MODERN THEME - DARK
+    Clean, minimal, premium academic style
+   ========================================================================== */
+
+$primary-color              : #818cf8;
+$dark-primary-color         : #6366f1;
+$darker-primary-color       : #4f46e5;
+$light-primary-color        : #a5b4fc;
+
+$background                 : #09090b;
+$background-light           : #18181b;
+$background-lighter         : #27272a;
+$text                       : #fafafa;
+$text-secondary             : #a1a1aa;
+$link                       : #a5b4fc;
+$link-dark                  : #c4b5fd;
+$link-light                 : #6366f1;
+$footer                     : #09090b;
+
+$danger-color               : #f87171;
+$info-color                 : #60a5fa;
+$notice-color               : #a1a1aa;
+$success-color              : #4ade80;
+$warning-color              : #fbbf24;
+
+$border-radius              : 10px;
+$box-shadow                 : 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+$box-shadow-hover           : 0 10px 25px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3);
+$global-transition          : all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #27272a;
+    --global-dark-border-color          : #3f3f46;
+    --global-code-background-color      : #18181b;
+    --global-code-text-color            : #{$light-primary-color};
+    --global-fig-caption-color          : #{$text-secondary};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$text-secondary};
+    --global-thead-color                : #{$background-light};
+
+    --card-bg                           : #{$background-light};
+    --card-shadow                       : #{$box-shadow};
+    --card-shadow-hover                 : #{$box-shadow-hover};
+    --card-radius                       : #{$border-radius};
+    --transition                        : #{$global-transition};
+
+    & {
+        color-scheme: dark;
+    }
+}

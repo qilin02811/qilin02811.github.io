@@ -1,0 +1,93 @@
+/* ==========================================================================
+    CUSTOM MODERN THEME - LIGHT
+    Clean, minimal, premium academic style
+   ========================================================================== */
+
+/* Typography */
+$doc-font-size              : 17;
+
+$serif                      : "Inter", Georgia, Times, serif;
+$sans-serif                 : "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$monospace                  : "JetBrains Mono", "SF Mono", Monaco, Consolas, monospace;
+
+$sans-serif-narrow          : $sans-serif;
+$helvetica                  : $sans-serif;
+$georgia                    : $serif;
+$times                      : $serif;
+$bodoni                     : $serif;
+$calisto                    : $serif;
+$garamond                   : $serif;
+
+$global-font-family         : $sans-serif;
+$header-font-family         : $sans-serif;
+$caption-font-family        : $serif;
+
+/* Type scale — slightly larger for readability */
+$type-size-1                : 2.75em;
+$type-size-2                : 2em;
+$type-size-3                : 1.5em;
+$type-size-4                : 1.2em;
+$type-size-5                : 1em;
+$type-size-6                : 0.85em;
+$type-size-7                : 0.75em;
+$type-size-8                : 0.65em;
+
+/* Colors — indigo/violet accent on warm white */
+$primary-color              : #6366f1;
+$dark-primary-color         : #4f46e5;
+$darker-primary-color       : #4338ca;
+$light-primary-color        : #818cf8;
+
+$background                 : #fafafa;
+$background-light           : #f4f4f5;
+$background-lighter         : #ffffff;
+$text                       : #18181b;
+$text-secondary             : #52525b;
+$link                       : #6366f1;
+$link-dark                  : #4f46e5;
+$link-light                 : #a5b4fc;
+$footer                     : #18181b;
+
+$danger-color               : #ef4444;
+$info-color                 : #3b82f6;
+$notice-color               : #71717a;
+$success-color              : #22c55e;
+$warning-color              : #f59e0b;
+
+/* Layout */
+$border-radius              : 10px;
+$box-shadow                 : 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+$box-shadow-hover           : 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
+$global-transition          : all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+$masthead-height            : 64px;
+$navicon-width              : 24px;
+$navicon-height             : 3px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+$content-max-width          : 800px;
+
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #e4e4e7;
+    --global-dark-border-color          : #d4d4d8;
+    --global-code-background-color      : #f4f4f5;
+    --global-code-text-color            : #{$darker-primary-color};
+    --global-fig-caption-color          : #{$text-secondary};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$text-secondary};
+    --global-thead-color                : #{$background-light};
+
+    --card-bg                           : #{$background-lighter};
+    --card-shadow                       : #{$box-shadow};
+    --card-shadow-hover                 : #{$box-shadow-hover};
+    --card-radius                       : #{$border-radius};
+    --transition                        : #{$global-transition};
+    --font-mono                         : #{$monospace};
+}
