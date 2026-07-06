@@ -7,22 +7,18 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Qilin — welcome to my academic homepage.
-
-I am a researcher focused on **[your research area]**. My work explores [brief description of your research interests and goals].
+Hi, I'm Qilin Chen — a Master's student at ECNU. My research interests lie at the intersection of **Software Engineering** and **Deep Learning**.
 
 ## Research Interests
 
 <div class="reveal" markdown="1">
-- **Interest 1** — Brief description of this research direction
-- **Interest 2** — Brief description of this research direction  
-- **Interest 3** — Brief description of this research direction
+- **Software Engineering** — Software analysis, testing, and automated program repair
+- **Deep Learning** — Neural networks, representation learning, and their applications in SE tasks
 </div>
 
 ## News
 
 <div class="reveal" markdown="1">
-- **[Month 2026]** — Paper accepted at Conference Name
-- **[Month 2025]** — Started position at Institution Name
-- **[Month 2024]** — Awarded Scholarship Name
+- **[Sep 2026]** — Started M.S. in Software Engineering at ECNU
+- **[Jun 2023]** — Graduated with B.S. in Computer Science from CQUST
 </div>

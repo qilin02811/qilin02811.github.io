@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "custom"
-title                    : "Qilin"
+title                    : "Qilin Chen"
 title_separator          : "·"
-name                     : &name "Qilin"
-description              : &description "Personal academic homepage"
+name                     : &name "Qilin Chen"
+description              : &description "SE & DL researcher @ ECNU"
 url                      : https://qilin02811.github.io
 baseurl                  : ""
 repository               : "qilin02811/qilin02811.github.io"
@@ -23,13 +23,13 @@ repository               : "qilin02811/qilin02811.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Qilin"
+  name             : "Qilin Chen"
   pronouns         : ""
-  bio              : ""
-  location         : ""
-  employer         : ""
+  bio              : "SE & DL @ ECNU"
+  location         : "Shanghai, China"
+  employer         : "ECNU"
   uri              : ""
-  email            : "" 
+  email            : "51295902014@stu.ecnu.edu.cn" 
 
   # Academic websites
   googlescholar    : ""

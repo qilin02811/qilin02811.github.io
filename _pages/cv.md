@@ -13,17 +13,13 @@ redirect_from:
 
 ## Education
 
-- **Ph.D. in [Field]** — [University Name], [Year] – Present
-- **M.S. in [Field]** — [University Name], [Year]
-- **B.S. in [Field]** — [University Name], [Year]
+- **M.S. in Software Engineering** — ECNU (East China Normal University), 2026 – 2029 (expected)
+- **B.S. in Computer Science** — CQUST (Chongqing University of Science & Technology), 2019 – 2023
 
 ## Research Experience
 
-- **[Position Title]** — [Lab / Institution], [Year] – Present
-  - [Brief description of research work]
-
-- **[Position Title]** — [Lab / Institution], [Year]
-  - [Brief description of research work]
+- **Graduate Researcher** — ECNU, 2026 – Present
+  - Focus on deep learning applications in software engineering
 
 ## Publications
 
