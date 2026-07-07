@@ -4,6 +4,8 @@
    ========================================================================== */
 
 /* --- TYPOGRAPHY POLISH --- */
+html { scroll-behavior: smooth; }
+
 body {
   font-weight: 400;
   font-size: #{$doc-font-size}px;
@@ -144,17 +146,19 @@ a {
   }
 }
 
-/* --- MASTHEAD (TOP NAV) --- */
+/* --- MASTHEAD (TOP NAV) — hidden on desktop with sidebar --- */
 .masthead {
   border-bottom: 1px solid var(--global-border-color);
   background: var(--card-bg);
   box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  backdrop-filter: blur(10px);
+
+  @include breakpoint($sidebar-screen-min-width) {
+    display: none;
+  }
 
   .masthead__menu-item a {
     font-weight: 500;
     font-size: 0.9em;
-    letter-spacing: 0.01em;
   }
 }
 
@@ -241,4 +245,33 @@ html[data-theme="dark"] {
   padding: 0.35em 0.8em;
   margin-right: 0.35em;
   margin-bottom: 0.35em;
+}
+
+/* --- SINGLE-PAGE SECTION SPACING --- */
+.page__content h2 {
+  margin-top: 2.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--global-border-color);
+  scroll-margin-top: 80px;   /* offset for mobile masthead */
+}
+
+.page__content h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+.page__content h2[id],
+.page__content h3[id] {
+  scroll-margin-top: 80px;
+}
+
+/* --- BILIBILI ICON IN SIDEBAR --- */
+.author__urls .icon-pad-right svg {
+  margin-right: 0;
+}
+
+/* --- SIDEBAR EXTRA REFINEMENT --- */
+.sidebar {
+  @include breakpoint($sidebar-screen-min-width) {
+    padding-left: 2em;
+  }
 }
